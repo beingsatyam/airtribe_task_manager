@@ -42,6 +42,7 @@ default value for priority is 'low'.
   - `description` (string): The description of the task (required).
   - `completed` (boolean): The completion status of the task (required).
   - `priority` (string): The priority level of the task (`low`, `medium`, `high`).
+  - `creation_time` (string): time when the task was created.
 
 ## Update an existing task by ID
 
