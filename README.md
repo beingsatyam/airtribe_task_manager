@@ -17,7 +17,7 @@ This project is a simple RESTful API for managing tasks using Node.js, Express.j
 
 # Endpoints
 ## Retrieve all tasks
-* ** URL: /tasks **
+* __ URL: /tasks __
 * Method: GET
 * Optional Query Parameters:
   * completed (boolean): Filter tasks by completion status.
