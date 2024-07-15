@@ -1,22 +1,20 @@
 const express = require("express");
-const router = express.Router()
-const TASKS = require("../db/tasks")
-console.log(TASKS);
+const router = express.Router();
+const TASKS = require("../db/tasks");
+
+// console.log(TASKS);
 
 
 
 
 router.get('/priority/:level', (req, res) => {
-    console.log(req.params)
-    const {
-        level
-    } = req.params;
-    console.log(level, level)
-    let availableTasks = TASKS.filter(task => task.priority === level & task.deleted !== 1)
 
+    const { level } = req.params;
+
+    let availableTasks = TASKS.filter(task => task.priority === level & task.deleted !== 1);
 
     if (availableTasks.length > 0) {
-        return res.json(availableTasks)
+        res.json(availableTasks);
     } else {
         res.status(404).send({
             message: 'No tasks found!'
@@ -26,17 +24,13 @@ router.get('/priority/:level', (req, res) => {
 
 router.get('/', (req, res) => {
 
-    console.log(req.query);
+    // console.log(req.query);
+    const { completed, sort } = req.query;
 
-    const {
-        completed,
-        sort
-    } = req.query;
-
-    let availableTasks = TASKS.filter(task => task.deleted !== 1)
+    let availableTasks = TASKS.filter(task => task.deleted !== 1);
 
     if (completed) {
-        const isCompleted = completed === 'true' ? true : false
+        const isCompleted = completed === 'true' ? true : false;
         availableTasks = availableTasks.filter(task => task.completed === isCompleted);
     };
 
@@ -47,7 +41,7 @@ router.get('/', (req, res) => {
     };
 
     if (availableTasks.length > 0) {
-        return res.json(availableTasks);
+        res.json(availableTasks);
     } else {
         res.status(404).send({
             message: 'No tasks found!'
@@ -61,13 +55,13 @@ router.get('/:id', (req, res) => {
     let id = req.params.id;
 
     let task = TASKS.find((value) => value.id == id & value.deleted != 1);
-    console.log(task);
+    // console.log(task);
 
     if (task) {
         res.send(task);
     } else {
         res.status(404).send({
-            message: 'Task not found'
+            message: 'Task not found!'
         });
     }
 });
@@ -93,7 +87,7 @@ router.put('/:id', (req, res) => {
     let payload = req.body;
 
     let task = TASKS.find((value) => value.id == id);
-    console.log(id);
+    // console.log(id);
 
     if (task) {
         task.title = payload.title;
@@ -114,8 +108,11 @@ router.delete('/:id', (req, res) => {
 
     let id = req.params.id;
 
-    let task = TASKS.find((value) => value.id == id);
-    console.log(task);
+
+    let availableTasks = TASKS.filter(task => task.deleted !== 1);
+
+    let task = availableTasks.find((value) => value.id == id);
+    // console.log(task);
 
     if (task) {
         task.deleted = 1;

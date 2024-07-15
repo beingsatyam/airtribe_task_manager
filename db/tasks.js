@@ -89,7 +89,7 @@ const tasks = [
       description: 'Install jsonwebtoken',
       completed: false
     }
-  ]
+  ];
 
 
 //adds datetime and priority level to each task
@@ -97,12 +97,12 @@ const tasks = [
 let i = 0;
 for (let task of tasks) {
  
-        task.creation_date = new Date(); 
-        task.creation_date.setMinutes(task.creation_date.getMinutes() + i);
+    task.creation_date = new Date(); 
+    task.creation_date.setMinutes(task.creation_date.getMinutes() + i);
 
 
-        task.priority = 'low';
- 
+    task.priority = 'low';
+
     i++;
 
 }
