@@ -41,7 +41,6 @@ The default value for priority is 'low'
   - `completed` (boolean): The completion status of the task (required).
   - `priority` (string): The priority level of the task (`low`, `medium`, `high`).
  
-  - 
 ## Update an Existing Task by ID
 
 - **URL:** `/tasks/:id`
