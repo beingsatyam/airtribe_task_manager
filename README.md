@@ -1,6 +1,6 @@
 # Task Manager API
 
-This project is a simple RESTful API for managing tasks using Node.js, Express.js, and other NPM packages. The API allows users to perform CRUD operations (Create, Read, Update, Delete) on tasks. Each task includes a title, description, completion status, and priority level.
+This project is a straightforward RESTful API built with Node.js and Express.js. The API allows users to perform CRUD operations (Create, Read, Update, Delete) on tasks. Each task includes a title, description, completion status, and priority level.
 
 ## Task Schema
 
