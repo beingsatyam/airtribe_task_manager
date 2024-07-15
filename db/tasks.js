@@ -92,9 +92,19 @@ const tasks = [
   ]
 
 
-  for (let task of tasks) {
-    task.datetime = new Date(); 
-    
-    task.datetime.setMinutes(task.datetime.getMinutes() + 10);
-  }
+//adds datetime and priority level to each task
+
+let i = 0;
+for (let task of tasks) {
+ 
+        task.creation_date = new Date(); 
+        task.creation_date.setMinutes(task.creation_date.getMinutes() + i);
+
+
+        task.priority = 'low';
+ 
+    i++;
+
+}
+
 module.exports = tasks;
