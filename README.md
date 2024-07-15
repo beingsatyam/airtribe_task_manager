@@ -30,38 +30,35 @@ default value for priority is 'low'.
 
 - **URL:** `/tasks/:id`
 - **Method:** `GET`
-- **Description:** Retrieve a single task by its ID.
 
 ## Create a New Task
 
 - **URL:** `/tasks`
 - **Method:** `POST`
-- **Description:** Create a new task.
 - **Body Parameters:**
   - `title` (string): The title of the task (required).
   - `description` (string): The description of the task (required).
   - `completed` (boolean): The completion status of the task (required).
   - `priority` (string): The priority level of the task (`low`, `medium`, `high`).
-  - `creation_time` (string): time when the task was created.
+ 
+  - 
+## Update an Existing Task by ID
 
-## Update an existing task by ID
+- **URL:** `/tasks/:id`
+- **Method:** `PUT`
+- **Body Parameters:**
+  - `title` (string): The title of the task (required).
+  - `description` (string): The description of the task (required).
+  - `completed` (boolean): The completion status of the task (required).
+  - `priority` (string): The priority level of the task (`low`, `medium`, `high`).
 
-URL: /tasks/:id
-Method: PUT
-Description: Update an existing task by its ID.
-Body Parameters:
-title (string): The title of the task (required).
-description (string): The description of the task (required).
-completed (boolean): The completion status of the task (required).
-priority (string): The priority level of the task (low, medium, high).
+## Delete a Task by ID
 
+- **URL:** `/tasks/:id`
+- **Method:** `DELETE`
 
-## Delete a task by ID
+## Retrieve Tasks Based on Priority Level
 
-**URL: /tasks/:id**
-**Method**: DELETE
-
-## Retrieve tasks based on priority level
-**URL: /tasks/priority/:level**
-**Method**: GET
-**Description**: Retrieve tasks based on priority level (low, medium, high).
+- **URL:** `/tasks/priority/:level`
+- **Method:** `GET`
+- **Description:** Retrieve tasks based on priority level (`low`, `medium`, `high`).
