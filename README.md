@@ -13,6 +13,8 @@ This project is a simple RESTful API for managing tasks using Node.js, Express.j
   "priority": "high"
 }
 
+creation_date is calculated automatically.
+default value for priority is 'low'.
 ```
 
 # Endpoints
@@ -26,22 +28,20 @@ This project is a simple RESTful API for managing tasks using Node.js, Express.j
 
 ## Retrieve a single task by ID
 
-URL: /tasks/:id
+- **URL:** `/tasks/:id`
+- **Method:** `GET`
+- **Description:** Retrieve a single task by its ID.
 
-Method: GET
+## Create a New Task
 
-Description: Retrieve a single task by its ID.
-
-Create a new task
-URL: /tasks
-Method: POST
-Description: Create a new task.
-Body Parameters:
-title (string): The title of the task (required).
-description (string): The description of the task (required).
-completed (boolean): The completion status of the task (required).
-priority (string): The priority level of the task (low, medium, high).
-
+- **URL:** `/tasks`
+- **Method:** `POST`
+- **Description:** Create a new task.
+- **Body Parameters:**
+  - `title` (string): The title of the task (required).
+  - `description` (string): The description of the task (required).
+  - `completed` (boolean): The completion status of the task (required).
+  - `priority` (string): The priority level of the task (`low`, `medium`, `high`).
 
 ## Update an existing task by ID
 
