@@ -13,16 +13,16 @@ This project is a simple RESTful API for managing tasks using Node.js, Express.j
   "priority": "high"
 }
 
-creation_date is calculated automatically.
-default value for priority is 'low'.
+The creation_date is automatically set to the current timestamp.
+The default value for priority is 'low'
 ```
 
 # Endpoints
 ## Retrieve all tasks
-* __ URL: /tasks __
-* Method: GET
+- **URL:** `/tasks`
+- **Method:** `GET`
 * Optional Query Parameters:
-  * completed (boolean): Filter tasks by completion status.
+  * completed (boolean): Filter tasks by completion status (true or false).
   * sort (string): Sort tasks by creation date (asc or desc).
 
 
