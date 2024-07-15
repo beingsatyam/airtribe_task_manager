@@ -50,6 +50,15 @@ The default value for priority is 'low'
   - `description` (string): The description of the task (required).
   - `completed` (boolean): The completion status of the task (required).
   - `priority` (string): The priority level of the task (`low`, `medium`, `high`).
+- **Example Payload:**
+```json
+{
+        "title": "Setup Webserver",
+        "description": "Install NGINX",
+        "completed": false,
+        "priority": "high"
+    }
+```
  
 ## Update an Existing Task by ID
 
