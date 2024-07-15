@@ -30,7 +30,17 @@ The default value for priority is 'low'
 
 - **URL:** `/tasks/:id`
 - **Method:** `GET`
-
+- **Example Response:**
+```json
+{
+        "id": 4,
+        "title": "Install Express",
+        "description": "Install Express",
+        "completed": false,
+        "creation_date": "2024-07-15T15:50:36.042Z",
+        "priority": "low"
+    }
+```
 ## Create a New Task
 
 - **URL:** `/tasks`
