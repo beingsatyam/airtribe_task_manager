@@ -55,10 +55,10 @@ priority (string): The priority level of the task (low, medium, high).
 
 ## Delete a task by ID
 
-URL: /tasks/:id
-Method: DELETE
-Description: Delete a task by its ID.
-Retrieve tasks based on priority level
-URL: /tasks/priority/:level
-Method: GET
-Description: Retrieve tasks based on priority level (low, medium, high).
+**URL: /tasks/:id**
+**Method**: DELETE
+
+## Retrieve tasks based on priority level
+**URL: /tasks/priority/:level**
+**Method**: GET
+**Description**: Retrieve tasks based on priority level (low, medium, high).
