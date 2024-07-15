@@ -17,12 +17,10 @@ app.use('/tasks', (req, res, next) => {
   });
 
 
- //Route registration
+//Route registration
 
- const taskRoute = require("./routes/tasks.routes");
-
- app.use("/tasks",taskRoute)
-
+const taskRoute = require("./routes/tasks.routes");
+app.use("/tasks",taskRoute)
 
 
 app.listen(port, (err) => {
@@ -31,7 +29,6 @@ app.listen(port, (err) => {
     }
     console.log(`Server is listening on ${port}`);
 });
-
 
 
 module.exports = app;
